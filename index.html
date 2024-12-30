@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Temperature Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mode-toggle">
+        <label for="toggleMode" class="switch">
+            <input type="checkbox" id="toggleMode">
+            <span class="slider"></span>
+        </label>
+        <span>Dark Mode</span>
+    </div>
+
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <div class="input-container">
+            <input type="number" id="tempInput" placeholder="Enter Temperature" />
+            <div class="unit-selector">
+                <select id="unitFrom">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+                <span> To </span>
+                <select id="unitTo">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+            <button onclick="convertTemperature()">Convert</button>
+            <button onclick="clearTable()">Clear Table</button>
+        </div>
+        <h2>Converted Temperature: <span id="result"></span></h2>
+        <div class="icons">
+            <img id="unitFromIcon" src="celsius.png" alt="Unit From Icon" />
+            <img id="unitToIcon" src="fahrenheit.jpg" alt="Unit To Icon" />
+            <img id="unitToIcon" src="kelvin.png" alt="Unit To Icon" />
+        </div>
+
+        <h3>Conversion History</h3>
+        <table id="conversionTable">
+            <thead>
+                <tr>
+                    <th>Input Value</th>
+                    <th>From Unit</th>
+                    <th>To Unit</th>
+                    <th>Converted Value</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
